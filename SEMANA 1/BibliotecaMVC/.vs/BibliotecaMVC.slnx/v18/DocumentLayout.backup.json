@@ -1,0 +1,173 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\David\\source\\repos\\BibliotecaMVC\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{50C2DE8B-2F73-4671-BEAF-797EF1220177}|BibliotecaMVC\\BibliotecaMVC.csproj|c:\\users\\david\\source\\repos\\bibliotecamvc\\bibliotecamvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{50C2DE8B-2F73-4671-BEAF-797EF1220177}|BibliotecaMVC\\BibliotecaMVC.csproj|solutionrelative:bibliotecamvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50C2DE8B-2F73-4671-BEAF-797EF1220177}|BibliotecaMVC\\BibliotecaMVC.csproj|c:\\users\\david\\source\\repos\\bibliotecamvc\\bibliotecamvc\\views\\home\\prestamos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{50C2DE8B-2F73-4671-BEAF-797EF1220177}|BibliotecaMVC\\BibliotecaMVC.csproj|solutionrelative:bibliotecamvc\\views\\home\\prestamos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50C2DE8B-2F73-4671-BEAF-797EF1220177}|BibliotecaMVC\\BibliotecaMVC.csproj|c:\\users\\david\\source\\repos\\bibliotecamvc\\bibliotecamvc\\views\\home\\acercade.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{50C2DE8B-2F73-4671-BEAF-797EF1220177}|BibliotecaMVC\\BibliotecaMVC.csproj|solutionrelative:bibliotecamvc\\views\\home\\acercade.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50C2DE8B-2F73-4671-BEAF-797EF1220177}|BibliotecaMVC\\BibliotecaMVC.csproj|c:\\users\\david\\source\\repos\\bibliotecamvc\\bibliotecamvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50C2DE8B-2F73-4671-BEAF-797EF1220177}|BibliotecaMVC\\BibliotecaMVC.csproj|solutionrelative:bibliotecamvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50C2DE8B-2F73-4671-BEAF-797EF1220177}|BibliotecaMVC\\BibliotecaMVC.csproj|c:\\users\\david\\source\\repos\\bibliotecamvc\\bibliotecamvc\\views\\home\\usuarios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{50C2DE8B-2F73-4671-BEAF-797EF1220177}|BibliotecaMVC\\BibliotecaMVC.csproj|solutionrelative:bibliotecamvc\\views\\home\\usuarios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50C2DE8B-2F73-4671-BEAF-797EF1220177}|BibliotecaMVC\\BibliotecaMVC.csproj|c:\\users\\david\\source\\repos\\bibliotecamvc\\bibliotecamvc\\views\\home\\libros.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{50C2DE8B-2F73-4671-BEAF-797EF1220177}|BibliotecaMVC\\BibliotecaMVC.csproj|solutionrelative:bibliotecamvc\\views\\home\\libros.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50C2DE8B-2F73-4671-BEAF-797EF1220177}|BibliotecaMVC\\BibliotecaMVC.csproj|c:\\users\\david\\source\\repos\\bibliotecamvc\\bibliotecamvc\\views\\home\\categorias.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{50C2DE8B-2F73-4671-BEAF-797EF1220177}|BibliotecaMVC\\BibliotecaMVC.csproj|solutionrelative:bibliotecamvc\\views\\home\\categorias.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50C2DE8B-2F73-4671-BEAF-797EF1220177}|BibliotecaMVC\\BibliotecaMVC.csproj|c:\\users\\david\\source\\repos\\bibliotecamvc\\bibliotecamvc\\views\\home\\autores.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{50C2DE8B-2F73-4671-BEAF-797EF1220177}|BibliotecaMVC\\BibliotecaMVC.csproj|solutionrelative:bibliotecamvc\\views\\home\\autores.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50C2DE8B-2F73-4671-BEAF-797EF1220177}|BibliotecaMVC\\BibliotecaMVC.csproj|c:\\users\\david\\source\\repos\\bibliotecamvc\\bibliotecamvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{50C2DE8B-2F73-4671-BEAF-797EF1220177}|BibliotecaMVC\\BibliotecaMVC.csproj|solutionrelative:bibliotecamvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AcercaDe.cshtml",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\BibliotecaMVC\\BibliotecaMVC\\Views\\Home\\AcercaDe.cshtml",
+              "RelativeDocumentMoniker": "BibliotecaMVC\\Views\\Home\\AcercaDe.cshtml",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\BibliotecaMVC\\BibliotecaMVC\\Views\\Home\\AcercaDe.cshtml",
+              "RelativeToolTip": "BibliotecaMVC\\Views\\Home\\AcercaDe.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-13T02:28:36.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Prestamos.cshtml",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\BibliotecaMVC\\BibliotecaMVC\\Views\\Home\\Prestamos.cshtml",
+              "RelativeDocumentMoniker": "BibliotecaMVC\\Views\\Home\\Prestamos.cshtml",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\BibliotecaMVC\\BibliotecaMVC\\Views\\Home\\Prestamos.cshtml",
+              "RelativeToolTip": "BibliotecaMVC\\Views\\Home\\Prestamos.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-13T02:27:59.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Usuarios.cshtml",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\BibliotecaMVC\\BibliotecaMVC\\Views\\Home\\Usuarios.cshtml",
+              "RelativeDocumentMoniker": "BibliotecaMVC\\Views\\Home\\Usuarios.cshtml",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\BibliotecaMVC\\BibliotecaMVC\\Views\\Home\\Usuarios.cshtml",
+              "RelativeToolTip": "BibliotecaMVC\\Views\\Home\\Usuarios.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-13T02:27:10.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Categorias.cshtml",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\BibliotecaMVC\\BibliotecaMVC\\Views\\Home\\Categorias.cshtml",
+              "RelativeDocumentMoniker": "BibliotecaMVC\\Views\\Home\\Categorias.cshtml",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\BibliotecaMVC\\BibliotecaMVC\\Views\\Home\\Categorias.cshtml",
+              "RelativeToolTip": "BibliotecaMVC\\Views\\Home\\Categorias.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-13T02:08:46.839Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Autores.cshtml",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\BibliotecaMVC\\BibliotecaMVC\\Views\\Home\\Autores.cshtml",
+              "RelativeDocumentMoniker": "BibliotecaMVC\\Views\\Home\\Autores.cshtml",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\BibliotecaMVC\\BibliotecaMVC\\Views\\Home\\Autores.cshtml",
+              "RelativeToolTip": "BibliotecaMVC\\Views\\Home\\Autores.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-13T02:07:48.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Libros.cshtml",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\BibliotecaMVC\\BibliotecaMVC\\Views\\Home\\Libros.cshtml",
+              "RelativeDocumentMoniker": "BibliotecaMVC\\Views\\Home\\Libros.cshtml",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\BibliotecaMVC\\BibliotecaMVC\\Views\\Home\\Libros.cshtml",
+              "RelativeToolTip": "BibliotecaMVC\\Views\\Home\\Libros.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-13T02:04:30.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\BibliotecaMVC\\BibliotecaMVC\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "BibliotecaMVC\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\BibliotecaMVC\\BibliotecaMVC\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "BibliotecaMVC\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T02:00:10.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\BibliotecaMVC\\BibliotecaMVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "BibliotecaMVC\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\BibliotecaMVC\\BibliotecaMVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "BibliotecaMVC\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-13T01:55:31.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\BibliotecaMVC\\BibliotecaMVC\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "BibliotecaMVC\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\BibliotecaMVC\\BibliotecaMVC\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "BibliotecaMVC\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-13T01:50:45.626Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
