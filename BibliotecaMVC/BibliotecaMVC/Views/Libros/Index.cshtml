@@ -1,0 +1,88 @@
+﻿
+@{
+    @model List<BibliotecaMVC.Models.Libro>;
+    /*
+    string nombre_asignatura = "Programación web 2 (Frontend)";
+
+    int edad = 10;
+    int contador = 1;
+    List<string> categorias = new List<string>
+    {
+        "Programación", "Novelas", "Historia", "Matemáticas", "Bases de datos"
+    };
+    */
+
+
+}
+<h2>Catalogo de Libros</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Titulo</th>
+            <th>Autor</th>
+            <th>Categoria</th>
+            <th>Precio</th>
+            <th>Disponibilidad</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var libro in Model)
+        {
+            <tr>
+                <td>@libro.ID</td>
+                <td>@libro.Titulo</td>
+                <td>@libro.Autor</td>
+                <td>@libro.Categoria</td>
+                <td>$@libro.Precio</td>
+                <td>
+                    @if (@libro.Disponible)
+                    {
+                        <spam class="badge bg-success">Disponible</spam>
+                    }
+                    else
+                    {
+                        <spam class="badge bg-danger">Prestado</spam>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+
+
+@*
+ 
+<h2>
+    @nombre_asignatura
+</h2>
+
+<h3>@edad</h3>
+
+@if(edad >= 18){
+    <h4>Mayor de edad</h4>
+}
+else
+{
+    <h4>menor de edad</h4>
+}
+
+@for(int i = 1; i<=edad; i++)
+{
+    <p>@i</p>
+}
+
+@while(contador <= edad)
+{
+    <p>Contador: @contador</p>
+    contador++;
+}
+
+@foreach(var categoria in categorias)
+{
+    <li>@categoria</li>
+}
+*@
