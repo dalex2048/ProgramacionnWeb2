@@ -4,6 +4,7 @@
     List<Autor> autores = ViewBag.Autores;
 }
 <h2>Catalogo de Autores</h2>
+<a asp-action="Create" class="btn btn-primary">Nuevo autor</a>
 
 <table class="table table-striped">
     <thead>
@@ -14,6 +15,7 @@
             <th>Nacionalidad</th>
             <th>Fecha de nacimiento</th>
             <th>Activo</th>
+            <th>Acciones</th>
         </tr>
     </thead
     <tbody>
@@ -35,6 +37,9 @@
                         <spam class="badge bg-danger">Inactivo</spam>
                     }
                 </td>
+                <td><a asp-action="Details" asp-route-id="@autor.ID" class="btn btn-primary">Detalles</a></td>
+                <td><a asp-action="Edit" asp-route-id="@autor.ID" class="btn btn-warning">Editar</a></td>
+                <td><a asp-action="Delete" asp-route-id="@autor.ID" class="btn btn-danger">Eliminar</a></td>
             </tr>
         }
     </tbody>

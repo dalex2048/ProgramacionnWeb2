@@ -16,6 +16,8 @@
 }
 <h2>Catalogo de Libros</h2>
 
+<a asp-action="Create" class="btn btn-primary">Nuevo Libro</a>
+
 <table class="table table-striped">
     <thead>
         <tr>
@@ -25,6 +27,7 @@
             <th>Categoria</th>
             <th>Precio</th>
             <th>Disponibilidad</th>
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
@@ -46,6 +49,11 @@
                         <spam class="badge bg-danger">Prestado</spam>
                     }
                 </td>
+                <td><a asp-action="Details" asp-route-id ="@libro.ID" class="btn btn-primary">Detalles</a></td>
+                <td><a asp-action="Edit" asp-route-id="@libro.ID" class="btn btn-warning">Editar</a></td>
+                <td><a asp-action="Delete" asp-route-id="@libro.ID" class="btn btn-danger">Eliminar</a></td>
+
+
             </tr>
         }
     </tbody>

@@ -23,6 +23,22 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
+[C:/Users/David/source/repos/Prograweb2/BibliotecaMVC/BibliotecaMVC/Views/Autor/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0b3JcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/David/source/repos/Prograweb2/BibliotecaMVC/BibliotecaMVC/Views/Autor/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0b3JcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/David/source/repos/Prograweb2/BibliotecaMVC/BibliotecaMVC/Views/Autor/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0b3JcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/David/source/repos/Prograweb2/BibliotecaMVC/BibliotecaMVC/Views/Autor/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0b3JcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/David/source/repos/Prograweb2/BibliotecaMVC/BibliotecaMVC/Views/Autor/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0b3JcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -45,6 +61,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/David/source/repos/Prograweb2/BibliotecaMVC/BibliotecaMVC/Views/Home/Usuarios.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVc3Vhcmlvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/David/source/repos/Prograweb2/BibliotecaMVC/BibliotecaMVC/Views/Libros/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/David/source/repos/Prograweb2/BibliotecaMVC/BibliotecaMVC/Views/Libros/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/David/source/repos/Prograweb2/BibliotecaMVC/BibliotecaMVC/Views/Libros/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/David/source/repos/Prograweb2/BibliotecaMVC/BibliotecaMVC/Views/Libros/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/David/source/repos/Prograweb2/BibliotecaMVC/BibliotecaMVC/Views/Libros/Index.cshtml]
