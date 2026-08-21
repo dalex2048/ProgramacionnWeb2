@@ -56,6 +56,71 @@
         
 
     </div>
+    <!--PRACTICA FLEXBOX SEMANA 5-->
+    <section class="home-flex-section">
+        
+        <h2>Accesos Rápidos (Utilizando FLEXBOX)</h2>
+        
+        <p class="home-flex-intro">Elige una opción para continuar. Fila organizada con Flexbox</p>
+
+        <div class="home-flex">
+            <a class="home-flex-item" asp-controller="Libros" asp-action="Index">Ver libros</a>
+            <a class="home-flex-item" asp-controller="Autor" asp-action="Index">Ver autores</a>
+            <a class="home-flex-item" asp-controller="Home" asp-action="About">Acerca de</a>
+        </div>
+
+    </section>
+
+    <section class="home-flex-prueba">
+        <h2>Biblioteca MVC (Temporal)</h2>
+        <p>
+            El cuadro rojo es el padre (altura fija). Las tres cajas son los hijos.
+            Cambia en el CSS solo justify-content o solo align-items y recarga.
+        </p>
+        <div class="flex-prueba-padre">
+            <div class="flex-prueba-hijo">Libros destacados</div>
+            <div class="flex-prueba-hijo">Autores destacados</div>
+            <div class="flex-prueba-hijo">Servicios Principales</div>
+        </div>
+    </section>
+
+    <!--PRACTICA FLEXBOX SEMANA 5-->
+
+
+    <!--PRACTICA GRID SEMANA 5-->
+    <section class="home-grid-section">
+        <h2>Destacados de la Biblioteca (utilizando CSS GRID)</h2>
+        <p class="home-grid-intro">
+            Tres áreas importantes de la Biblioteca Virtual: libros, autores y categorías.
+            Esta sección usa CSS Grid para repartir el contenido en columnas.
+        </p>
+
+        <div class="home-grid">
+            <article class="home-grid-item">
+                <h3>Libros destacados</h3>
+                <p>CLean Code by Robert Martin, Clean Arquitecture by Carlos Martin y + 100 Libros de programación disponibles</p>
+                <a asp-controller="Libros" asp-action="Index">Ir a Libros</a>
+            </article>
+
+            <article class="home-grid-item">
+                <h3>Autores destacados</h3>
+                <p>Ada Lovelace, Dennis Ritchie, Bjarne Stroustrup, Guido van Rossum y +50 autores de programación disponibles</p>
+                <a asp-controller="Autores" asp-action="Index">Ir a Autores</a>
+            </article>
+
+            <article class="home-grid-item">
+                <h3>Categorias</h3>
+                <p>Organiza tu busqueda por genero, o temas para llegar mas rapido al libro que necesitas</p>
+                <a asp-controller="Home" asp-action="Categorias">Ir a Categorias</a>
+            </article>
+        </div>
+
+    </section>
+    <!--PRACTICA GRID SEMANA 5-->
+
+
+    </div>
+
 
     <div class="row g-4 mb-4">
         <div class="col-12 col-md-6 col-lg-4">
@@ -109,5 +174,128 @@
             </div>
         </div>
     </div>
+<!--SIN RESPONSIVE-->
+<div class="section">
+    <h2 class="text-center mb-4">1. Sin Responsive</h2>
+    <div class="contenedor sin-responsive">
+        @await Html.PartialAsync("_ServiceCard", new BibliotecaMVC.Models.ServiceCard
+        {
+            ImageUrl = "https://picsum.photos/200/100",
+            Text = "(1)Biblioteca en linea"
+        })
+        @await Html.PartialAsync("_ServiceCard", new BibliotecaMVC.Models.ServiceCard
+        {
+            ImageUrl = "https://picsum.photos/200/100",
+            Text = "(2)Biblioteca en linea"
+        })
+        @await Html.PartialAsync("_ServiceCard", new BibliotecaMVC.Models.ServiceCard
+        {
+            ImageUrl = "https://picsum.photos/200/100",
+            Text = "(3)Biblioteca en linea"
+        })
+    </div>
+</div>
+
+
+
+<!--MEDIA QUERIES-->
+<div class="section">
+    <h2 class="text-center mb-4">2.Responsive con Media Queries</h2>
+    <div class="contenedor media-query">
+        @await Html.PartialAsync("_ServiceCard", new BibliotecaMVC.Models.ServiceCard
+        {
+            ImageUrl = "https://picsum.photos/200/100",
+            Text = "(1)Biblioteca en linea"
+        })
+        @await Html.PartialAsync("_ServiceCard", new BibliotecaMVC.Models.ServiceCard
+        {
+            ImageUrl = "https://picsum.photos/200/100",
+            Text = "(2)Biblioteca en linea"
+        })
+        @await Html.PartialAsync("_ServiceCard", new BibliotecaMVC.Models.ServiceCard
+        {
+            ImageUrl = "https://picsum.photos/200/100",
+            Text = "(3)Biblioteca en linea"
+        })
+    </div>
+</div>
+
+<!--BOOTSTRAP-->
+<div class="container mt-5">
+    <h2 class="text-center mb-4">3.Responsive con Bootstrap</h2>
+
+    <div class="row">
+        <!--SERVICIO 1-->
+        <div class="col-12 col-md-4 mb-3">
+            <div class="card h-100 shadow-sm">
+                <img class="card-img-top" alt="Imagen" src="https://picsum.photos/200/100" />
+                <div class="card-body">
+                    <p class="card-text">(1) Texto servicio 1</p>
+                </div>
+            </div>
+        </div>
+        <!--SERVICIO 2-->
+        <div class="col-12 col-md-4 mb-3">
+            <div class="card h-100 shadow-sm">
+                <img class="card-img-top" alt="Imagen" src="https://picsum.photos/200/100" />
+                <div class="card-body">
+                    <p class="card-text">(2) Texto servicio 2</p>
+                </div>
+            </div>
+        </div>
+        <!--SERVICIO 3-->
+        <div class="col-12 col-md-4 mb-3">
+            <div class="card h-100 shadow-sm">
+                <img class="card-img-top" alt="Imagen" src="https://picsum.photos/200/100" />
+                <div class="card-body">
+                    <p class="card-text">(3) Texto servicio 3</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--CSS GRID-->
+<div class="section">
+    <h2 class="text-center mb-4">4.Responsive con CSS GRID</h2>
+    <div class="contenedor grid-layout">
+        @await Html.PartialAsync("_ServiceCard", new BibliotecaMVC.Models.ServiceCard
+        {
+            ImageUrl = "https://picsum.photos/200/100",
+            Text = "(1)Biblioteca en linea"
+        })
+        @await Html.PartialAsync("_ServiceCard", new BibliotecaMVC.Models.ServiceCard
+        {
+            ImageUrl = "https://picsum.photos/200/100",
+            Text = "(2)Biblioteca en linea"
+        })
+        @await Html.PartialAsync("_ServiceCard", new BibliotecaMVC.Models.ServiceCard
+        {
+            ImageUrl = "https://picsum.photos/200/100",
+            Text = "(3)Biblioteca en linea"
+        })
+    </div>
+</div>
+<!--FLEXBOX-->
+<div class="section">
+    <h2 class="text-center mb-4">5.Responsive con FLEX BOX</h2>
+    <div class="contenedor flex-layout">
+        @await Html.PartialAsync("_ServiceCard", new BibliotecaMVC.Models.ServiceCard
+        {
+            ImageUrl = "https://picsum.photos/200/100",
+            Text = "(1)Biblioteca en linea"
+        })
+        @await Html.PartialAsync("_ServiceCard", new BibliotecaMVC.Models.ServiceCard
+        {
+            ImageUrl = "https://picsum.photos/200/100",
+            Text = "(2)Biblioteca en linea"
+        })
+        @await Html.PartialAsync("_ServiceCard", new BibliotecaMVC.Models.ServiceCard
+        {
+            ImageUrl = "https://picsum.photos/200/100",
+            Text = "(3)Biblioteca en linea"
+        })
+    </div>
+</div>
 
 </div>

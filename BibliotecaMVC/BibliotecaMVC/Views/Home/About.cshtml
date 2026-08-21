@@ -41,27 +41,64 @@
         </aside>
     </section>
 
+    <!--COMPONENTES REUTILIZABLES-->
     <section class="about-services">
-        <h2>Enfoque bibliotecario</h2>
-        <p>
-            La biblioteca virtual reúne en un solo sitio el Autores, Libros
-            y los servicios de apoyo al lector.
-        </p>
-        <ul class="about-services-list">
-            <li>
-                <h3>Libros</h3>
-                <p>Títulos, disponibilidad y datos básicos del catálogo.</p>
-            </li>
-            <li>
-                <h3>Autores</h3>
-                <p>Quiénes escriben las obras.</p>
-            </li>
-            <li>
-                <h3>Categorías</h3>
-                <p>Clasificación por género o temática.</p>
-            </li>
-        </ul>
+        <h2>Servicios de la Biblioteca utilizando componentes reutilizables</h2>
+        <div class="container-service-card">
+            @await Html.PartialAsync(
+            "_ServiceCard",
+            new BibliotecaMVC.Models.ServiceCard{
+                ImageUrl = "/images/carousel-1.jpg",
+                Text = "Préstamo y devolución de libros en la biblioteca."
+            })
+            @await Html.PartialAsync(
+            "_ServiceCard",
+            new BibliotecaMVC.Models.ServiceCard
+            {
+                ImageUrl = "https://picsum.photos/id/24/400/200",
+                Text = "Consulta y catalogo por titulo y disponibilidad."
+            })
+            @await Html.PartialAsync(
+            "_ServiceCard",
+            new BibliotecaMVC.Models.ServiceCard
+            {
+                ImageUrl = "https://picsum.photos/id/24/400/200",
+                Text = "Orientación para localizar libros por categoria."
+            })
+        </div>
     </section>
+
+    <section class="about-services">
+        <h2>Caracteristicas del sistema (componentes reutilizables)</h2>
+        <div class="container-info-card">
+            @await Html.PartialAsync(
+                "_InfoCard",
+                new BibliotecaMVC.Models.InfoCard{
+                    Title = "Libros",
+                    Description = "Gestiona titulos, disponibilidad y todo el catalogo de Libros"
+                }
+            )
+            @await Html.PartialAsync(
+                "_InfoCard",
+                new BibliotecaMVC.Models.InfoCard
+                {
+                    Title = "Autores",
+                    Description = "Consulte quien escribio cada obra y explora sus publicaciones"
+                }
+            )
+            @await Html.PartialAsync(
+                "_InfoCard",
+                new BibliotecaMVC.Models.InfoCard
+                {
+                    Title = "Categorias",
+                    Description = "Clasifica la colección por género o tema para buscar más rápido"
+                }
+            )
+
+        </div>
+    </section>
+
+    <!--COMPONENTES REUTILIZABLES-->
 
     <section class="team-section">
         <figure>

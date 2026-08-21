@@ -194,4 +194,4 @@ C:\Users\David\source\repos\Prograweb2\BibliotecaMVC\BibliotecaMVC\obj\Debug\net
 C:\Users\David\source\repos\Prograweb2\BibliotecaMVC\BibliotecaMVC\obj\Debug\net10.0\BibliotecaMVC.pdb
 C:\Users\David\source\repos\Prograweb2\BibliotecaMVC\BibliotecaMVC\obj\Debug\net10.0\BibliotecaMVC.genruntimeconfig.cache
 C:\Users\David\source\repos\Prograweb2\BibliotecaMVC\BibliotecaMVC\obj\Debug\net10.0\ref\BibliotecaMVC.dll
-C:\Users\David\source\repos\Prograweb2\BibliotecaMVC\BibliotecaMVC\obj\Debug\net10.0\compressed\1clyn8z30k-{0}-dwecy52zxl-dwecy52zxl.gz
+C:\Users\David\source\repos\Prograweb2\BibliotecaMVC\BibliotecaMVC\obj\Debug\net10.0\compressed\1clyn8z30k-{0}-54mpewvmf8-54mpewvmf8.gz
