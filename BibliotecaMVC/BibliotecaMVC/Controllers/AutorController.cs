@@ -1,9 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using BibliotecaMVC.Models;
+using BibliotecaMVC.Services;
 namespace BibliotecaMVC.Controllers
+
 {
     public class AutorController : Controller
     {
+        private readonly IAutorService _autorService;
+        public AutorController(IAutorService autorService)
+        {
+            _autorService = autorService;
+        }
         private static List<Autor> autores = new List<Autor>
         {
                 new Autor
@@ -54,13 +61,13 @@ namespace BibliotecaMVC.Controllers
         };
         public IActionResult Index()
         {
-            ViewBag.Autores = autores;
+            ViewBag.Autores = _autorService.ObtenerTodos().ToList();
             return View();
         }
 
         public IActionResult Details(int id)
         {
-            var autor = autores.FirstOrDefault(x => x.ID == id);
+            var autor = _autorService.ObtenerPorId(id);
             if (autor == null)
             {
                 return NotFound();

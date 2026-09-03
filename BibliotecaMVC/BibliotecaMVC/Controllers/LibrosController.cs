@@ -1,10 +1,17 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using BibliotecaMVC.Models;
+using BibliotecaMVC.Repositories;
 
 namespace BibliotecaMVC.Controllers
 {
     public class LibrosController : Controller
     {
+        private readonly IRepositorioLibro _repositorio; 
+
+        public LibrosController(IRepositorioLibro repositorio)
+        {
+            _repositorio = repositorio;
+        }
         private static List<Libro> libros = new List<Libro>
         {
             new Libro{ID = 1,Titulo = "Clean Code",Autor = "Robert Martin", Categoria = "Programación", Precio = 35.3M, Disponible = true},
@@ -13,7 +20,8 @@ namespace BibliotecaMVC.Controllers
         };
         public IActionResult Index()
         {
-            return View(libros);
+            var listLibros = _repositorio.ObtenerTodos();
+            return View(listLibros);
         }
         public IActionResult Details(int id)
         {
