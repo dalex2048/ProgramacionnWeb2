@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BibliotecaMVC.Data;
+using Microsoft.EntityFrameworkCore;
+
+using Microsoft.AspNetCore.Mvc;
 using BibliotecaMVC.Models;
 using BibliotecaMVC.Services;
 namespace BibliotecaMVC.Controllers
@@ -6,11 +9,14 @@ namespace BibliotecaMVC.Controllers
 {
     public class AutorController : Controller
     {
-        private readonly IAutorService _autorService;
-        public AutorController(IAutorService autorService)
+        private readonly BibliotecaContext _context;
+
+        public AutorController(BibliotecaContext context)
         {
-            _autorService = autorService;
+            _context = context;
         }
+
+        /*
         private static List<Autor> autores = new List<Autor>
         {
                 new Autor
@@ -59,15 +65,22 @@ namespace BibliotecaMVC.Controllers
                     Activo = true
                 }
         };
+        
         public IActionResult Index()
         {
             ViewBag.Autores = _autorService.ObtenerTodos().ToList();
             return View();
         }
+        */
 
-        public IActionResult Details(int id)
+        public async Task<IActionResult> Index()
         {
-            var autor = _autorService.ObtenerPorId(id);
+        var autores = await _context.Autores.ToListAsync();
+        return View(autores);
+        }
+        public async Task<IActionResult> Details(int id)
+        {
+            var autor = await _context.Autores.FindAsync(id);
             if (autor == null)
             {
                 return NotFound();
@@ -82,25 +95,19 @@ namespace BibliotecaMVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(Autor autor)
+        public async Task<IActionResult> Create(Autor autor)
         {
             if (!ModelState.IsValid)
             {
                 return View(autor);
             }
-            if (autores.Any())
-            {
-                autor.ID = autores.Max(x => x.ID) + 1;
-            }
-            else
-            {
-                autor.ID = 1;
-            }
-            autores.Add(autor);
-
+            _context.Autores.Add(autor);
+            await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
+
+        /*
         public IActionResult Delete(int id)
         {
             var autor = autores.FirstOrDefault(x =>x.ID == id);
@@ -148,6 +155,7 @@ namespace BibliotecaMVC.Controllers
             _autor.Activo = autor.Activo;
             return RedirectToAction(nameof(Index));
         }
+        */
 
     }
 }

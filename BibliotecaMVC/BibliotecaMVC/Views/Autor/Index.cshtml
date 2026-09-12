@@ -1,8 +1,9 @@
 ﻿
+@model IEnumerable<BibliotecaMVC.Models.Autor>
 @{
-    @using BibliotecaMVC.Models;
-    List<Autor> autores = ViewBag.Autores;
+    ViewData["Title"] = "Autor";
 }
+
 <h2>Catalogo de Autores</h2>
 <a asp-action="Create" class="btn btn-primary">Nuevo autor</a>
 
@@ -17,9 +18,9 @@
             <th>Activo</th>
             <th>Acciones</th>
         </tr>
-    </thead
+    </thead>
     <tbody>
-        @foreach( var autor in autores)
+        @foreach( var autor in Model)
         {
             <tr>
                 <td>@autor.ID</td>
