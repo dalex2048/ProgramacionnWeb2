@@ -1,11 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using BibliotecaMVC.Models;
 using BibliotecaMVC.Repositories;
+using BibliotecaMVC.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace BibliotecaMVC.Controllers
 {
     public class LibrosController : Controller
     {
+        /*
         private readonly IRepositorioLibro _repositorio; 
 
         public LibrosController(IRepositorioLibro repositorio)
@@ -18,14 +21,21 @@ namespace BibliotecaMVC.Controllers
             new Libro{ID = 2,Titulo = "Clean Arquitecture",Autor = "Carlos Martin", Categoria = "Programación", Precio = 25.9M, Disponible = false},
             new Libro{ID = 3,Titulo = "C# MVC",Autor = "Carlos Martin", Categoria = "Programación", Precio = 25.9M, Disponible = true}
         };
-        public IActionResult Index()
+        */
+        private readonly BibliotecaContext _context;
+        public LibrosController(BibliotecaContext context)
         {
-            var listLibros = _repositorio.ObtenerTodos();
+            _context = context;
+        }
+        public async Task<IActionResult> Index()
+        {
+            var listLibros = await _context.Libros.ToListAsync();
             return View(listLibros);
         }
-        public IActionResult Details(int id)
+
+        public async Task<IActionResult> Details(int id)
         {
-            var libro = libros.FirstOrDefault(x => x.ID == id);
+            var libro = await _context.Libros.FindAsync(id);
             if(libro == null)
             {
                 return NotFound();
@@ -35,27 +45,24 @@ namespace BibliotecaMVC.Controllers
 
         public IActionResult Create()
         {
+
             return View();
         }
+
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create (Libro libro)
+        public async Task<IActionResult> Create (Libro libro)
         {
             if (!ModelState.IsValid)
             {
                 return View(libro);
             }
-            if (libros.Any())
-            {
-                libro.ID = libros.Max(x => x.ID) + 1;
-            }
-            else
-            {
-                libro.ID = 1;
-            }
-            libros.Add(libro);
+            _context.Libros.Add(libro);
+            await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+        /*
         public IActionResult Edit(int id)
         {
             var libro = libros.FirstOrDefault(y => y.ID == id);
@@ -105,7 +112,7 @@ namespace BibliotecaMVC.Controllers
             libros.Remove(libro);
             return RedirectToAction(nameof(Index));
         }
-
+        */
 
 
 
