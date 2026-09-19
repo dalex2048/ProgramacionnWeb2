@@ -105,8 +105,53 @@ namespace BibliotecaMVC.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+        public async Task<IActionResult> Edit(int id)
+        {
+            var autor =await _context.Autores.FindAsync(id);
+            if(autor == null)
+            {
+                return NotFound();
+            }
 
+            return View(autor);
+        }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(Autor autor, int id)
+        {
+            if( id != autor.ID)
+            {
+                return BadRequest();
+            }
+            if (!ModelState.IsValid)
+            {
+                return View(autor);
+            }
+            var exists = await _context.Autores.AnyAsync(a => a.ID == id);
+
+            if(!exists)
+            {
+                return NotFound();
+            }
+            _context.Update(autor);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var autor = await _context.Autores.FindAsync(id);
+            if(autor == null)
+            {
+                return NotFound();
+            }
+            _context.Autores.Remove(autor);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
         /*
         public IActionResult Delete(int id)
         {

@@ -3,6 +3,7 @@ using BibliotecaMVC.Models;
 using BibliotecaMVC.Repositories;
 using BibliotecaMVC.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
 namespace BibliotecaMVC.Controllers
 {
@@ -60,6 +61,29 @@ namespace BibliotecaMVC.Controllers
             }
             _context.Libros.Add(libro);
             await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+        public async Task<IActionResult> Edit(int id)
+        {
+            var Libro = await _context.Libros.FindAsync(id);
+            if(Libro == null)
+            {
+                return NotFound();
+            }
+            return View(Libro);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(Libro libro, int id)
+        {
+            if(id != libro.ID)
+            {
+                return BadRequest();
+            }
+            if (!ModelState.IsValid)
+            {
+                return View(libro);
+            }
             return RedirectToAction(nameof(Index));
         }
         /*

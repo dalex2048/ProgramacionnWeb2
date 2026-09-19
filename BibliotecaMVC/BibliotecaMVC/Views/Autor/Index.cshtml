@@ -39,8 +39,13 @@
                     }
                 </td>
                 <td><a asp-action="Details" asp-route-id="@autor.ID" class="btn btn-primary">Detalles</a></td>
-                <td><a asp-action="Edit" asp-route-id="@autor.ID" class="btn btn-warning">Editar</a></td>
-                <td><a asp-action="Delete" asp-route-id="@autor.ID" class="btn btn-danger">Eliminar</a></td>
+                <td><a asp-action="Edit" asp-route-id="@autor.ID" class="btn btn-warning swal-edit-link">Editar</a></td>
+                <td>
+                    <form asp-action="Delete" asp-route-id="@autor.ID" method="post" class="swal-delete-form d-inline">
+                        @Html.AntiForgeryToken()
+                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                    </form>
+                </td>
             </tr>
         }
     </tbody>
