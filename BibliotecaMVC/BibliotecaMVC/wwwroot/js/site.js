@@ -26,7 +26,7 @@ $(function () {
         e.preventDefault();
         var form = this;
         Swal.fire({
-            title: '¿Guardar Item?',
+            title: '¿Editar Item?',
             icon: 'question',
             showCancelButton: true,
             confirmButtonText: 'Si, Guardar',

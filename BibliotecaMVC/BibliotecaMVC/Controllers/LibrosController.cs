@@ -84,8 +84,29 @@ namespace BibliotecaMVC.Controllers
             {
                 return View(libro);
             }
+            var exists = await _context.Libros.AnyAsync(a => a.ID == id);
+            if (!exists)
+            {
+                return NotFound();
+            }
+            _context.Update(libro);
+            await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var libro = await _context.Libros.FindAsync(id);
+            if(libro == null)
+            {
+                return NotFound();
+            }
+            _context.Libros.Remove(libro);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
         /*
         public IActionResult Edit(int id)
         {

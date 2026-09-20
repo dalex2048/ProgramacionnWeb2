@@ -6,7 +6,10 @@
 
 <h1>@ViewData["Title"]</h1>
 
-<form asp-action="Edit" method="post">
+<form asp-action="Edit" method="post" class="swal-save-form">
+    <div class="mb-3">
+        <input type ="hidden" asp-for="ID" />
+    </div>
     <div class="mb-3">
         <label asp-for="Titulo"></label>
         <input asp-for="Titulo" class="form-control" />
