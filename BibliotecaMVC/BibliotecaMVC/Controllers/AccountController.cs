@@ -8,13 +8,13 @@ namespace BibliotecaMVC.Controllers
     {
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly UserManager<IdentityUser> _userManager;
-        public AccountController(SignInManager<IdentityUser>  singInManager, UserManager<IdentityUser> userManager)
+        public AccountController(SignInManager<IdentityUser> singInManager, UserManager<IdentityUser> userManager)
         {
             _signInManager = singInManager;
             _userManager = userManager;
         }
         [HttpGet]
-        public IActionResult login(string? returnUrl = null)
+        public IActionResult Login(string? returnUrl = null)
         {
             return View(new LoginViewModel
             {
@@ -47,7 +47,7 @@ namespace BibliotecaMVC.Controllers
                     lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
-                    if(!string.IsNullOrWhiteSpace(model.ReturnUrl) && Url.IsLocalUrl(model.ReturnUrl))
+                    if (!string.IsNullOrWhiteSpace(model.ReturnUrl) && Url.IsLocalUrl(model.ReturnUrl))
                     {
                         return Redirect(model.ReturnUrl);
                     }
@@ -55,6 +55,32 @@ namespace BibliotecaMVC.Controllers
                 }
             }
             ModelState.AddModelError(string.Empty, "Las credenciales introducidas no son correctas.");
+            return View(model);
+        }
+        [HttpGet]
+        public IActionResult Register()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Register(RegisterViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            var user = new IdentityUser { UserName = model.UserName, Email = model.Email};
+            var result = await _userManager.CreateAsync(user, model.Password);
+            if (result.Succeeded)
+            {
+                await _signInManager.SignInAsync(user, isPersistent: false);
+                return RedirectToAction("Index", "Home");
+            }
+            foreach(var error in result.Errors)
+            {
+                ModelState.AddModelError(string.Empty, error.Description);
+            }
             return View(model);
         }
     }
