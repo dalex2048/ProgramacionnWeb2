@@ -4,9 +4,12 @@ using BibliotecaMVC.Repositories;
 using BibliotecaMVC.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BibliotecaMVC.Controllers
 {
+
+    [Authorize]
     public class LibrosController : Controller
     {
         /*

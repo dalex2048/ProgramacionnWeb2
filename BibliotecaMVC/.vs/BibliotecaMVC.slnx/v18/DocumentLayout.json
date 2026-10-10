@@ -3,36 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BE51BE62-EE7A-D472-716D-555E17144DD3}|BibliotecaMVC\\BibliotecaMVC.csproj|c:\\users\\david\\source\\repos\\prograweb2\\bibliotecamvc\\bibliotecamvc\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BE51BE62-EE7A-D472-716D-555E17144DD3}|BibliotecaMVC\\BibliotecaMVC.csproj|solutionrelative:bibliotecamvc\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{BE51BE62-EE7A-D472-716D-555E17144DD3}|BibliotecaMVC\\BibliotecaMVC.csproj|c:\\users\\david\\source\\repos\\prograweb2\\bibliotecamvc\\bibliotecamvc\\views\\shared\\_menuprincipal.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BE51BE62-EE7A-D472-716D-555E17144DD3}|BibliotecaMVC\\BibliotecaMVC.csproj|solutionrelative:bibliotecamvc\\views\\shared\\_menuprincipal.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE51BE62-EE7A-D472-716D-555E17144DD3}|BibliotecaMVC\\BibliotecaMVC.csproj|c:\\users\\david\\source\\repos\\prograweb2\\bibliotecamvc\\bibliotecamvc\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BE51BE62-EE7A-D472-716D-555E17144DD3}|BibliotecaMVC\\BibliotecaMVC.csproj|solutionrelative:bibliotecamvc\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{BE51BE62-EE7A-D472-716D-555E17144DD3}|BibliotecaMVC\\BibliotecaMVC.csproj|c:\\users\\david\\source\\repos\\prograweb2\\bibliotecamvc\\bibliotecamvc\\views\\account\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BE51BE62-EE7A-D472-716D-555E17144DD3}|BibliotecaMVC\\BibliotecaMVC.csproj|solutionrelative:bibliotecamvc\\views\\account\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BE51BE62-EE7A-D472-716D-555E17144DD3}|BibliotecaMVC\\BibliotecaMVC.csproj|c:\\users\\david\\source\\repos\\prograweb2\\bibliotecamvc\\bibliotecamvc\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BE51BE62-EE7A-D472-716D-555E17144DD3}|BibliotecaMVC\\BibliotecaMVC.csproj|solutionrelative:bibliotecamvc\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE51BE62-EE7A-D472-716D-555E17144DD3}|BibliotecaMVC\\BibliotecaMVC.csproj|c:\\users\\david\\source\\repos\\prograweb2\\bibliotecamvc\\bibliotecamvc\\models\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE51BE62-EE7A-D472-716D-555E17144DD3}|BibliotecaMVC\\BibliotecaMVC.csproj|solutionrelative:bibliotecamvc\\models\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BE51BE62-EE7A-D472-716D-555E17144DD3}|BibliotecaMVC\\BibliotecaMVC.csproj|c:\\users\\david\\source\\repos\\prograweb2\\bibliotecamvc\\bibliotecamvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE51BE62-EE7A-D472-716D-555E17144DD3}|BibliotecaMVC\\BibliotecaMVC.csproj|solutionrelative:bibliotecamvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE51BE62-EE7A-D472-716D-555E17144DD3}|BibliotecaMVC\\BibliotecaMVC.csproj|c:\\users\\david\\source\\repos\\prograweb2\\bibliotecamvc\\bibliotecamvc\\views\\shared\\_menuprincipal.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BE51BE62-EE7A-D472-716D-555E17144DD3}|BibliotecaMVC\\BibliotecaMVC.csproj|solutionrelative:bibliotecamvc\\views\\shared\\_menuprincipal.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{BE51BE62-EE7A-D472-716D-555E17144DD3}|BibliotecaMVC\\BibliotecaMVC.csproj|c:\\users\\david\\source\\repos\\prograweb2\\bibliotecamvc\\bibliotecamvc\\controllers\\libroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE51BE62-EE7A-D472-716D-555E17144DD3}|BibliotecaMVC\\BibliotecaMVC.csproj|solutionrelative:bibliotecamvc\\controllers\\libroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE51BE62-EE7A-D472-716D-555E17144DD3}|BibliotecaMVC\\BibliotecaMVC.csproj|c:\\users\\david\\source\\repos\\prograweb2\\bibliotecamvc\\bibliotecamvc\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE51BE62-EE7A-D472-716D-555E17144DD3}|BibliotecaMVC\\BibliotecaMVC.csproj|solutionrelative:bibliotecamvc\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE51BE62-EE7A-D472-716D-555E17144DD3}|BibliotecaMVC\\BibliotecaMVC.csproj|c:\\users\\david\\source\\repos\\prograweb2\\bibliotecamvc\\bibliotecamvc\\controllers\\autorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE51BE62-EE7A-D472-716D-555E17144DD3}|BibliotecaMVC\\BibliotecaMVC.csproj|solutionrelative:bibliotecamvc\\controllers\\autorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BE51BE62-EE7A-D472-716D-555E17144DD3}|BibliotecaMVC\\BibliotecaMVC.csproj|c:\\users\\david\\source\\repos\\prograweb2\\bibliotecamvc\\bibliotecamvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BE51BE62-EE7A-D472-716D-555E17144DD3}|BibliotecaMVC\\BibliotecaMVC.csproj|solutionrelative:bibliotecamvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE51BE62-EE7A-D472-716D-555E17144DD3}|BibliotecaMVC\\BibliotecaMVC.csproj|c:\\users\\david\\source\\repos\\prograweb2\\bibliotecamvc\\bibliotecamvc\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE51BE62-EE7A-D472-716D-555E17144DD3}|BibliotecaMVC\\BibliotecaMVC.csproj|solutionrelative:bibliotecamvc\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BE51BE62-EE7A-D472-716D-555E17144DD3}|BibliotecaMVC\\BibliotecaMVC.csproj|c:\\users\\david\\source\\repos\\prograweb2\\bibliotecamvc\\bibliotecamvc\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BE51BE62-EE7A-D472-716D-555E17144DD3}|BibliotecaMVC\\BibliotecaMVC.csproj|solutionrelative:bibliotecamvc\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE51BE62-EE7A-D472-716D-555E17144DD3}|BibliotecaMVC\\BibliotecaMVC.csproj|c:\\users\\david\\source\\repos\\prograweb2\\bibliotecamvc\\bibliotecamvc\\data\\bibliotecacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE51BE62-EE7A-D472-716D-555E17144DD3}|BibliotecaMVC\\BibliotecaMVC.csproj|solutionrelative:bibliotecamvc\\data\\bibliotecacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BE51BE62-EE7A-D472-716D-555E17144DD3}|BibliotecaMVC\\BibliotecaMVC.csproj|c:\\users\\david\\source\\repos\\prograweb2\\bibliotecamvc\\bibliotecamvc\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BE51BE62-EE7A-D472-716D-555E17144DD3}|BibliotecaMVC\\BibliotecaMVC.csproj|solutionrelative:bibliotecamvc\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE51BE62-EE7A-D472-716D-555E17144DD3}|BibliotecaMVC\\BibliotecaMVC.csproj|c:\\users\\david\\source\\repos\\prograweb2\\bibliotecamvc\\bibliotecamvc\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BE51BE62-EE7A-D472-716D-555E17144DD3}|BibliotecaMVC\\BibliotecaMVC.csproj|solutionrelative:bibliotecamvc\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,15 +78,106 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\BibliotecaMVC\\Views\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "BibliotecaMVC\\Views\\Account\\Register.cshtml",
-              "ToolTip": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\BibliotecaMVC\\Views\\Account\\Register.cshtml",
-              "RelativeToolTip": "BibliotecaMVC\\Views\\Account\\Register.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB4AAAA4AAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "_MenuPrincipal.cshtml",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\BibliotecaMVC\\Views\\Shared\\_MenuPrincipal.cshtml",
+              "RelativeDocumentMoniker": "BibliotecaMVC\\Views\\Shared\\_MenuPrincipal.cshtml",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\BibliotecaMVC\\Views\\Shared\\_MenuPrincipal.cshtml",
+              "RelativeToolTip": "BibliotecaMVC\\Views\\Shared\\_MenuPrincipal.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-26T14:55:04.553Z",
+              "WhenOpened": "2026-10-10T02:45:11.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccessDenied.cshtml",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\BibliotecaMVC\\Views\\Account\\AccessDenied.cshtml",
+              "RelativeDocumentMoniker": "BibliotecaMVC\\Views\\Account\\AccessDenied.cshtml",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\BibliotecaMVC\\Views\\Account\\AccessDenied.cshtml",
+              "RelativeToolTip": "BibliotecaMVC\\Views\\Account\\AccessDenied.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-10T02:18:34.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\BibliotecaMVC\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "BibliotecaMVC\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\BibliotecaMVC\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "BibliotecaMVC\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-10T02:13:31.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LibrosController.cs",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\BibliotecaMVC\\Controllers\\LibrosController.cs",
+              "RelativeDocumentMoniker": "BibliotecaMVC\\Controllers\\LibrosController.cs",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\BibliotecaMVC\\Controllers\\LibrosController.cs",
+              "RelativeToolTip": "BibliotecaMVC\\Controllers\\LibrosController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-10T02:12:06.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CategoriasController.cs",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\BibliotecaMVC\\Controllers\\CategoriasController.cs",
+              "RelativeDocumentMoniker": "BibliotecaMVC\\Controllers\\CategoriasController.cs",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\BibliotecaMVC\\Controllers\\CategoriasController.cs",
+              "RelativeToolTip": "BibliotecaMVC\\Controllers\\CategoriasController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-10T02:11:52.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AutorController.cs",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\BibliotecaMVC\\Controllers\\AutorController.cs",
+              "RelativeDocumentMoniker": "BibliotecaMVC\\Controllers\\AutorController.cs",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\BibliotecaMVC\\Controllers\\AutorController.cs",
+              "RelativeToolTip": "BibliotecaMVC\\Controllers\\AutorController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-10T02:10:28.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\BibliotecaMVC\\Program.cs",
+              "RelativeDocumentMoniker": "BibliotecaMVC\\Program.cs",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\BibliotecaMVC\\Program.cs",
+              "RelativeToolTip": "BibliotecaMVC\\Program.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAC8AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-10T01:37:32.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\BibliotecaMVC\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "BibliotecaMVC\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\BibliotecaMVC\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "BibliotecaMVC\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-10T01:31:41.939Z",
               "EditorCaption": ""
             },
             {
@@ -85,82 +188,36 @@
               "RelativeDocumentMoniker": "BibliotecaMVC\\Controllers\\AccountController.cs",
               "ToolTip": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\BibliotecaMVC\\Controllers\\AccountController.cs",
               "RelativeToolTip": "BibliotecaMVC\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAswFMAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAmwGQAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-26T01:07:09.924Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "RegisterViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\BibliotecaMVC\\Models\\RegisterViewModel.cs",
-              "RelativeDocumentMoniker": "BibliotecaMVC\\Models\\RegisterViewModel.cs",
-              "ToolTip": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\BibliotecaMVC\\Models\\RegisterViewModel.cs",
-              "RelativeToolTip": "BibliotecaMVC\\Models\\RegisterViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-26T02:37:31.623Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_MenuPrincipal.cshtml",
-              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\BibliotecaMVC\\Views\\Shared\\_MenuPrincipal.cshtml",
-              "RelativeDocumentMoniker": "BibliotecaMVC\\Views\\Shared\\_MenuPrincipal.cshtml",
-              "ToolTip": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\BibliotecaMVC\\Views\\Shared\\_MenuPrincipal.cshtml",
-              "RelativeToolTip": "BibliotecaMVC\\Views\\Shared\\_MenuPrincipal.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAC8AAABmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-26T02:16:51.865Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\BibliotecaMVC\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "BibliotecaMVC\\Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\BibliotecaMVC\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "BibliotecaMVC\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAABAAAAAAAAAAAAAUwDAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-26T01:16:55.082Z",
+              "WhenOpened": "2026-09-26T01:07:09.924Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "LoginViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\BibliotecaMVC\\Models\\LoginViewModel.cs",
-              "RelativeDocumentMoniker": "BibliotecaMVC\\Models\\LoginViewModel.cs",
-              "ToolTip": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\BibliotecaMVC\\Models\\LoginViewModel.cs",
-              "RelativeToolTip": "BibliotecaMVC\\Models\\LoginViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-26T00:54:02.632Z"
+              "DocumentIndex": 10,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\BibliotecaMVC\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "BibliotecaMVC\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\BibliotecaMVC\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "BibliotecaMVC\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-10T01:22:28.16Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\BibliotecaMVC\\Program.cs",
-              "RelativeDocumentMoniker": "BibliotecaMVC\\Program.cs",
-              "ToolTip": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\BibliotecaMVC\\Program.cs",
-              "RelativeToolTip": "BibliotecaMVC\\Program.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACgAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-26T00:47:41.711Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "BibliotecaContext.cs",
-              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\BibliotecaMVC\\Data\\BibliotecaContext.cs",
-              "RelativeDocumentMoniker": "BibliotecaMVC\\Data\\BibliotecaContext.cs",
-              "ToolTip": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\BibliotecaMVC\\Data\\BibliotecaContext.cs",
-              "RelativeToolTip": "BibliotecaMVC\\Data\\BibliotecaContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-26T00:39:35.733Z"
+              "DocumentIndex": 8,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\BibliotecaMVC\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "BibliotecaMVC\\Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\Prograweb2\\BibliotecaMVC\\BibliotecaMVC\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "BibliotecaMVC\\Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAB8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-10T00:42:52.132Z",
+              "EditorCaption": ""
             }
           ]
         }
