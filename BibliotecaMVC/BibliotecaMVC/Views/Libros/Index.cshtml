@@ -21,7 +21,12 @@
 }
 <h2>Catalogo de Libros</h2>
 
-<a asp-action="Create" class="btn btn-primary">Nuevo Libro</a>
+
+
+@if(User.IsInRole("Administrador"))
+{
+    <a asp-action="Create" class="btn btn-primary">Nuevo Libro</a>
+}
 
 <table class="table table-striped">
     <thead>
@@ -55,13 +60,17 @@
                     }
                 </td>
                 <td><a asp-action="Details" asp-route-id ="@libro.ID" class="btn btn-primary">Detalles</a></td>
-                <td><a asp-action="Edit" asp-route-id="@libro.ID" class="btn btn-warning">Editar</a></td>
-                <td>
-                    <form asp-action="Delete" asp-route-id="@libro.ID" method="post" class="swal-delete-form d-inline">
-                        @Html.AntiForgeryToken()
-                        <button type="submit" class="btn btn-danger">Eliminar</button>
-                    </form>
-                </td>
+                @if (User.IsInRole("Administrador"))
+                {
+                    <td><a asp-action="Edit" asp-route-id="@libro.ID" class="btn btn-warning">Editar</a></td>
+                    <td>
+                        <form asp-action="Delete" asp-route-id="@libro.ID" method="post" class="swal-delete-form d-inline">
+                            @Html.AntiForgeryToken()
+                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                        </form>
+                    </td>
+                }
+                
 
 
             </tr>

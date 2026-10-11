@@ -55,5 +55,29 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
 
+using (var scoope = app.Services.CreateScope())
+{
+    var roleManager = scoope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+    var userManager = scoope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
+
+    string[] roles = { "Administrador", "Usuario" };
+    foreach (var role in roles)
+    {
+        if(!await roleManager.RoleExistsAsync(role))
+        {
+            await roleManager.CreateAsync(new IdentityRole(role));
+        }
+    }
+    var admin = await userManager.FindByNameAsync("admin");
+    if (admin != null && !await userManager.IsInRoleAsync(admin, "Administrador"))
+    {
+        await userManager.AddToRoleAsync(admin, "Administrador");
+    }
+    var usuario = await userManager.FindByNameAsync("david");
+    if(usuario != null && !await userManager.IsInRoleAsync(usuario, "Usuario"))
+    {
+        await userManager.AddToRoleAsync(usuario, "Usuario");
+    }
+}
 
 app.Run();

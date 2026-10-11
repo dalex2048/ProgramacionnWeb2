@@ -85,6 +85,7 @@ namespace BibliotecaMVC.Controllers
             var result = await _userManager.CreateAsync(user, model.Password);
             if (result.Succeeded)
             {
+                await _userManager.AddToRoleAsync(user, "Usuario");
                 await _signInManager.SignInAsync(user, isPersistent: false);
                 return RedirectToAction("Index", "Home");
             }
