@@ -2,28 +2,12 @@
 
 @{
 
-    
-    
-    /*
-     * 
-         * @model List<BibliotecaMVC.Models.Libro>;
-    string nombre_asignatura = "Programación web 2 (Frontend)";
-
-    int edad = 10;
-    int contador = 1;
-    List<string> categorias = new List<string>
-    {
-        "Programación", "Novelas", "Historia", "Matemáticas", "Bases de datos"
-    };
-    */
-
-
 }
 <h2>Catalogo de Libros</h2>
 
 
 
-@if(User.IsInRole("Administrador"))
+@if (User.IsInRole("Administrador") || User.IsInRole("Bibliotecario"))
 {
     <a asp-action="Create" class="btn btn-primary">Nuevo Libro</a>
 }
@@ -60,7 +44,7 @@
                     }
                 </td>
                 <td><a asp-action="Details" asp-route-id ="@libro.ID" class="btn btn-primary">Detalles</a></td>
-                @if (User.IsInRole("Administrador"))
+                @if (User.IsInRole("Administrador") || User.IsInRole("Bibliotecario"))
                 {
                     <td><a asp-action="Edit" asp-route-id="@libro.ID" class="btn btn-warning">Editar</a></td>
                     <td>

@@ -1,4 +1,13 @@
-﻿<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+﻿@{
+    var esAdmin = User.IsInRole("Administrador");
+    var esBibliotecario = User.IsInRole("Bibliotecario");
+    var esUsuario = User.IsInRole("Usuario");
+
+    var puedeGestionarLibros = esAdmin || esBibliotecario;
+    var puedeVerLibros = puedeGestionarLibros || esUsuario;
+}
+
+<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
     <div class="container-fluid">
         <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">BibliotecaMVC</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -10,10 +19,19 @@
                 <li class="nav-item">
                     <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
                 </li>
-                @if(User.Identity?.IsAuthenticated == true){
+                @if (puedeGestionarLibros)
+                {
+                   <li class="nav-item">
+                        <a class="nav-link text-dark" asp-controller="Libros" asp-action="Index">Libros</a>
+                    </li> 
+                }else if (puedeVerLibros)
+                {
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-controller="Libros" asp-action="Index">Libros</a>
                     </li>
+                }
+                @if(User.Identity?.IsAuthenticated == true){
+                    
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-controller="Categorias" asp-action="Index">Categorias</a>
                     </li>
@@ -38,17 +56,17 @@
                     <li class="nav-item">
                         <span class="nav-link">
                             @User.Identity.Name
-                            @if (User.IsInRole("Administrador"))
+                            @if (esAdmin)
                             {
                                 <span class="badge bg-danger">Administrador</span>
                             }
-                            else if (User.IsInRole("Usuario"))
+                            else if (esUsuario)
                             {
                                 <span class="badge bg-secondary">Usuario</span>
                             }
-                            else if (User.IsInRole("Bibliotecario"))
+                            else if (esBibliotecario)
                             {
-                                <span class="badge bg-secondary">Bibliotecario</span>
+                                <span class="badge bg-primary">Bibliotecario</span>
                             }
                         </span>
                         <form asp-controller="Account" asp-action="Logout" method="post" class="d-inline">

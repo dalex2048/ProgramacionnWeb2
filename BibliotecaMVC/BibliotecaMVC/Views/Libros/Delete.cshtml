@@ -5,6 +5,10 @@
 
 <h1>@ViewData["Title"]</h1>
 
+<div class="alert alert-warning">
+    ¿Seguro que deseas eliminar <strong>@Model.Titulo</strong> (@Model.Autor)? Esta acción no se puede deshacer.
+</div>
+
 <form asp-action="Delete" method="post">
     <input type="hidden" asp-for="ID" />
     <button type="submit" class="btn btn-danger">Eliminar</button>

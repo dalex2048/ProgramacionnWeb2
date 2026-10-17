@@ -2,12 +2,19 @@
 @model IEnumerable<BibliotecaMVC.Models.Autor>
 @{
     ViewData["Title"] = "Autor";
+    var puedeGestionar = User.IsInRole("Administrador") || User.IsInRole("Bibliotecario");
 }
 
 <h2>Catalogo de Autores</h2>
-@if (User.IsInRole("Administrador") || User.IsInRole("Bibliotecario"))
+@if (puedeGestionar)
 {
     <a asp-action="Create" class="btn btn-primary">Nuevo autor</a>
+}
+@if (!puedeGestionar)
+{
+    <div class="alert alert-info">
+        Modo consulta: puedes ver el catálogo y los detalles de cada libro.
+    </div>
 }
 
 
@@ -43,7 +50,7 @@
                     }
                 </td>
                 <td><a asp-action="Details" asp-route-id="@autor.ID" class="btn btn-primary">Detalles</a></td>
-                @if (User.IsInRole("Administrador") || User.IsInRole("Bibliotecario"))
+                @if (puedeGestionar)
                 {
                     <td><a asp-action="Edit" asp-route-id="@autor.ID" class="btn btn-warning swal-edit-link">Editar</a></td>
                     <td>

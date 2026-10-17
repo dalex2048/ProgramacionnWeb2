@@ -9,23 +9,9 @@ using Microsoft.AspNetCore.Authorization;
 namespace BibliotecaMVC.Controllers
 {
 
-    [Authorize]
+    [Authorize(Roles = "Administrador, Bibliotecario, Usuario")]
     public class LibrosController : Controller
     {
-        /*
-        private readonly IRepositorioLibro _repositorio; 
-
-        public LibrosController(IRepositorioLibro repositorio)
-        {
-            _repositorio = repositorio;
-        }
-        private static List<Libro> libros = new List<Libro>
-        {
-            new Libro{ID = 1,Titulo = "Clean Code",Autor = "Robert Martin", Categoria = "Programación", Precio = 35.3M, Disponible = true},
-            new Libro{ID = 2,Titulo = "Clean Arquitecture",Autor = "Carlos Martin", Categoria = "Programación", Precio = 25.9M, Disponible = false},
-            new Libro{ID = 3,Titulo = "C# MVC",Autor = "Carlos Martin", Categoria = "Programación", Precio = 25.9M, Disponible = true}
-        };
-        */
         private readonly BibliotecaContext _context;
         public LibrosController(BibliotecaContext context)
         {
@@ -46,7 +32,7 @@ namespace BibliotecaMVC.Controllers
             }
             return View(libro);
         }
-        [Authorize(Roles = "Administrador")]
+        [Authorize(Roles = "Administrador, Bibliotecario")]
         public IActionResult Create()
         {
 
@@ -56,7 +42,7 @@ namespace BibliotecaMVC.Controllers
         
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "Administrador")]
+        [Authorize(Roles = "Administrador, Bibliotecario")]
         public async Task<IActionResult> Create (Libro libro)
         {
             if (!ModelState.IsValid)
@@ -67,7 +53,7 @@ namespace BibliotecaMVC.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-        [Authorize(Roles = "Administrador")]
+        [Authorize(Roles = "Administrador, Bibliotecario")]
         public async Task<IActionResult> Edit(int id)
         {
             var Libro = await _context.Libros.FindAsync(id);
@@ -79,7 +65,7 @@ namespace BibliotecaMVC.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "Administrador")]
+        [Authorize(Roles = "Administrador, Bibliotecario")]
         public async Task<IActionResult> Edit(Libro libro, int id)
         {
             if(id != libro.ID)
@@ -101,7 +87,7 @@ namespace BibliotecaMVC.Controllers
         }
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "Administrador")]
+        [Authorize(Roles = "Administrador, Bibliotecario")]
         public async Task<IActionResult> Delete(int id)
         {
             var libro = await _context.Libros.FindAsync(id);
@@ -113,60 +99,5 @@ namespace BibliotecaMVC.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-
-        /*
-        public IActionResult Edit(int id)
-        {
-            var libro = libros.FirstOrDefault(y => y.ID == id);
-            if (libro == null)
-            {
-                return NotFound();
-            }
-            return View(libro);
-        }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Edit(int id, Libro libro)
-        {
-            if (id != libro.ID)
-                return NotFound();
-            if(!ModelState.IsValid)
-                return View(libro) ;
-            var _libro = libros.FirstOrDefault(x  => x.ID == id);
-            if (_libro == null)
-                return NotFound();
-
-            _libro.Titulo = libro.Titulo;
-            _libro.Autor = libro.Autor;
-            _libro.Categoria = libro.Categoria;
-            _libro.Precio = libro.Precio;
-            _libro.Disponible = libro.Disponible;
-
-            return RedirectToAction(nameof(Index));
-
-        }
-
-
-        public IActionResult Delete(int id)
-        {
-            var libro = libros.FirstOrDefault(x=> x.ID == id);
-            if (libro == null)
-                return NotFound();
-            return View(libro);
-        }
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public IActionResult DeletePost(int id)
-        {
-            var libro = libros.FirstOrDefault(x=> x.ID ==id);
-            if (libro == null)
-                return NotFound();
-            libros.Remove(libro);
-            return RedirectToAction(nameof(Index));
-        }
-        */
-
-
-
     }
 }

@@ -1,10 +1,36 @@
 ﻿@{
     ViewData["Tittle"] = "Acceso Denegado";
+    var returnUrl = ViewData["ReturnUrl"] as string ?? "";
+    var vieneDeLibros = returnUrl.StartsWith("/Libros", StringComparison.OrdinalIgnoreCase);
+
+    var rol = User.IsInRole("Administrador") ? "Administrador"
+        : User.IsInRole("Bibliotecario") ? "Bibliotecario"
+        : User.IsInRole("Usuario") ? "Usuario"
+        : null;
 }
 
-<div class= "text-center">
-    <h1 class="text-danger">acceso denegado</h1>
-    <p>No tienes permisos suficientes para acceder a este recurso</p>
-    <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Volver a inicio</a>
-</div>
+<div class="text-center mt-4">
+    <h1 class="text-danger">Acceso denegado</h1>
+    <p class="lead">No tienes permisos suficientes para realizar esta acción.</p>
 
+    @if (User.Identity?.IsAuthenticated == true)
+    {
+        <p>Sesión iniciada como <strong>@User.Identity?.Name</strong> · rol: <strong>@(rol ?? "sin rol asignado")</strong></p>
+    }
+
+    @if (vieneDeLibros)
+    {
+        <div class="alert alert-warning d-inline-block">
+            En el módulo Libros, los roles Administrador, Bibliotecario y Usuario pueden <strong>consultar</strong> libros,
+            pero solo <strong>Administrador</strong> y <strong>Bibliotecario</strong> pueden agregarlos, editarlos o eliminarlos.
+        </div>
+    }
+
+    <div class="mt-3">
+        @if (vieneDeLibros && rol != null)
+        {
+            <a asp-controller="Libros" asp-action="Index" class="btn btn-primary">Volver al catálogo</a>
+        }
+        <a asp-controller="Home" asp-action="Index" class="btn btn-secondary">Ir al inicio</a>
+    </div>
+</div>
