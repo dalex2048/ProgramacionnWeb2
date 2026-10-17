@@ -60,7 +60,7 @@ using (var scoope = app.Services.CreateScope())
     var roleManager = scoope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
     var userManager = scoope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
 
-    string[] roles = { "Administrador", "Usuario" };
+    string[] roles = { "Administrador","Bibliotecario", "Usuario" };
     foreach (var role in roles)
     {
         if(!await roleManager.RoleExistsAsync(role))

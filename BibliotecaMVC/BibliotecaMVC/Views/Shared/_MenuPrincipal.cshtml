@@ -46,6 +46,10 @@
                             {
                                 <span class="badge bg-secondary">Usuario</span>
                             }
+                            else if (User.IsInRole("Bibliotecario"))
+                            {
+                                <span class="badge bg-secondary">Bibliotecario</span>
+                            }
                         </span>
                         <form asp-controller="Account" asp-action="Logout" method="post" class="d-inline">
                             <button type="submit" class="nav-link btn btn-link">Cerrar sesión</button>
