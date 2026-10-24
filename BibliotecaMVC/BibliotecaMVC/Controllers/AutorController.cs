@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using BibliotecaMVC.Models;
 using BibliotecaMVC.Services;
+using Microsoft.Extensions.Logging;
 namespace BibliotecaMVC.Controllers
 
 {
@@ -11,87 +12,57 @@ namespace BibliotecaMVC.Controllers
     public class AutorController : Controller
     {
         private readonly BibliotecaContext _context;
+        private readonly ILogger<AutorController> _logger;
 
-        public AutorController(BibliotecaContext context)
+        public AutorController(BibliotecaContext context, ILogger<AutorController> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
-        /*
-        private static List<Autor> autores = new List<Autor>
-        {
-                new Autor
-                {
-                    ID = 1,
-                    Nombre = "Dennis",
-                    Apellido = "Ritchie",
-                    Nacionalidad = "Estadounidense",
-                    FechaNacimiento = new DateOnly(1941, 9, 9),
-                    Activo = false
-                },
-                new Autor
-                {
-                    ID = 2,
-                    Nombre = "Linus",
-                    Apellido = "Torvalds",
-                    Nacionalidad = "Finlandés",
-                    FechaNacimiento = new DateOnly(1969, 12, 28),
-                    Activo = true
-                },
-                new Autor
-                {
-                    ID = 3,
-                    Nombre = "Ada",
-                    Apellido = "Lovelace",
-                    Nacionalidad = "Británica",
-                    FechaNacimiento = new DateOnly(1815, 12, 10),
-                    Activo = false
-                },
-                new Autor
-                {
-                    ID = 4,
-                    Nombre = "Anders",
-                    Apellido = "Hejlsberg",
-                    Nacionalidad = "Danés",
-                    FechaNacimiento = new DateOnly(1960, 12, 2),
-                    Activo = true
-                },
-                new Autor
-                {
-                    ID = 5,
-                    Nombre = "Martin",
-                    Apellido = "Fowler",
-                    Nacionalidad = "Británico",
-                    FechaNacimiento = new DateOnly(1963, 12, 18),
-                    Activo = true
-                }
-        };
         
-        public IActionResult Index()
-        {
-            ViewBag.Autores = _autorService.ObtenerTodos().ToList();
-            return View();
-        }
-        */
 
         public async Task<IActionResult> Index()
         {
-        var autores = await _context.Autores.ToListAsync();
-        return View(autores);
+            _logger.LogInformation("Consultando el listado de autores");
+            try
+            {
+                var autores = await _context.Autores.ToListAsync();
+                return View(autores);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Se produjo un error al consultar listado de autores");
+                throw;
+            }
+            
+            
         }
         public async Task<IActionResult> Details(int id)
         {
-            var autor = await _context.Autores.FindAsync(id);
-            if (autor == null)
+            _logger.LogInformation($"Consultando los detalles del autor con id {id}");
+            try
             {
-                return NotFound();
-            }
+                var autor = await _context.Autores.FindAsync(id);
+                if (autor == null)
+                {
+                    _logger.LogWarning("No se encontró el autor con id {id}", id);
+                    return NotFound();
+                }
 
-            return View(autor);
+                return View(autor);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Se produjo un error al consultar el detalle del autor {id}");
+                throw;
+            }
+            
         }
         [Authorize(Roles = "Administrador,Bibliotecario")]
         public IActionResult Create()
         {
+            _logger.LogInformation("Iniciando la creación de un autor");
             return View();
         }
 
@@ -100,24 +71,46 @@ namespace BibliotecaMVC.Controllers
         [Authorize(Roles = "Administrador,Bibliotecario")]
         public async Task<IActionResult> Create(Autor autor)
         {
+            _logger.LogInformation("Creando un autor");
+
             if (!ModelState.IsValid)
             {
+                _logger.LogError("El autor enviado no cumple con los requerimientos minimos");
                 return View(autor);
             }
-            _context.Autores.Add(autor);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            try
+            {
+                _context.Autores.Add(autor);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Se´produjo un error al crear el autor");
+                throw;
+            }
+            
         }
         [Authorize(Roles = "Administrador, Bibliotecario")]
         public async Task<IActionResult> Edit(int id)
         {
-            var autor =await _context.Autores.FindAsync(id);
-            if(autor == null)
+            _logger.LogInformation($"Iniciando la operación de edición del autor con id {id}");
+            try
             {
-                return NotFound();
-            }
+                var autor = await _context.Autores.FindAsync(id);
+                if (autor == null)
+                {
+                    return NotFound();
+                }
 
-            return View(autor);
+                return View(autor);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Se produjo un error al iniciar la operación del editor con id {id}");
+                throw;
+            }
+            
         }
 
         [HttpPost]
@@ -125,7 +118,8 @@ namespace BibliotecaMVC.Controllers
         [Authorize(Roles = "Administrador, Bibliotecario")]
         public async Task<IActionResult> Edit(Autor autor, int id)
         {
-            if( id != autor.ID)
+            _logger.LogInformation($"Editando el autor con id {id}");
+            if (id != autor.ID)
             {
                 return BadRequest();
             }
@@ -133,15 +127,26 @@ namespace BibliotecaMVC.Controllers
             {
                 return View(autor);
             }
-            var exists = await _context.Autores.AnyAsync(a => a.ID == id);
-
-            if(!exists)
+            try
             {
-                return NotFound();
+                var exists = await _context.Autores.AnyAsync(a => a.ID == id);
+
+                if (!exists)
+                {
+                    _logger.LogWarning($"No se encontro el autor con id {id}");
+                    return NotFound();
+                }
+                _context.Update(autor);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
             }
-            _context.Update(autor);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Se produjo un error al editar el autor con id {id}");
+                throw;
+            }
+            
+            
         }
 
         [HttpPost, ActionName("Delete")]
@@ -149,14 +154,25 @@ namespace BibliotecaMVC.Controllers
         [Authorize(Roles = "Administrador, Bibliotecario")]
         public async Task<IActionResult> Delete(int id)
         {
-            var autor = await _context.Autores.FindAsync(id);
-            if(autor == null)
+            _logger.LogInformation($"Eliminando autor con id {id}");
+            try
             {
-                return NotFound();
+                var autor = await _context.Autores.FindAsync(id);
+                if (autor == null)
+                {
+                    _logger.LogWarning("No se encontro el autor con el id {id}", id);
+                    return NotFound();
+                }
+                _context.Autores.Remove(autor);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
             }
-            _context.Autores.Remove(autor);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Se produjo un error al eliminar el autor con id {id}", id);
+                throw;
+            }
+            
         }
         /*
         public IActionResult Delete(int id)
