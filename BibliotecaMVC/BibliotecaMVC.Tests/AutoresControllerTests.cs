@@ -18,8 +18,8 @@ public class AutoresControllerTests
         await using var context = CreateContext();
         // Inserta dos autores de prueba en el contexto.
         context.Autores.AddRange(
-            new Autor { Nombre = "Gabriel García Márquez", Nacionalidad = "Colombiana" },
-            new Autor { Nombre = "Isabel Allende", Nacionalidad = "Chilena" });
+            new Autor { Nombre = "Gabriel", Apellido = "García Márquez", Nacionalidad = "Colombiana" },
+            new Autor { Nombre = "Isabel", Apellido = "Allende", Nacionalidad = "Chilena" });
         // Persiste los autores en la base de datos en memoria.
         await context.SaveChangesAsync();
         // Crea el controlador usando el contexto y un logger simulado.
@@ -46,7 +46,7 @@ public class AutoresControllerTests
         // Crea una base de datos en memoria aislada.
         await using var context = CreateContext();
         // Crea un autor de prueba.
-        var autor = new Autor { Nombre = "Julio Cortázar", Nacionalidad = "Argentina" };
+        var autor = new Autor { Nombre = "Julio", Apellido = "Cortázar", Nacionalidad = "Argentina" };
         // Añade el autor al contexto.
         context.Autores.Add(autor);
         // Guarda el autor y genera su identificador.
@@ -89,7 +89,7 @@ public class AutoresControllerTests
         // Crea el controlador de prueba.
         var controller = CreateController(context);
         // Construye el autor válido que se enviará a la acción.
-        var autor = new Autor { Nombre = "Mario Vargas Llosa", Nacionalidad = "Peruana" };
+        var autor = new Autor { Nombre = "Mario", Apellido = "Vargas Llosa", Nacionalidad = "Peruana" };
 
         // Ejecuta la acción Create con el autor.
         var result = await controller.Create(autor);
@@ -101,7 +101,7 @@ public class AutoresControllerTests
         // Comprueba que se haya guardado un único autor.
         Assert.Equal(1, await context.Autores.CountAsync());
         // Comprueba que el autor guardado tenga el nombre esperado.
-        Assert.Equal("Mario Vargas Llosa", (await context.Autores.SingleAsync()).Nombre);
+        Assert.Equal("Mario", (await context.Autores.SingleAsync()).Nombre);
     }
 
     [Fact]
@@ -140,7 +140,7 @@ public class AutoresControllerTests
         await using (var seedContext = CreateContext(databaseName))
         {
             // Crea el autor original.
-            var autor = new Autor { Nombre = "Nombre original", Nacionalidad = "Española" };
+            var autor = new Autor { Nombre = "Nombre", Apellido = "original", Nacionalidad = "Española" };
             // Añade el autor al contexto inicial.
             seedContext.Autores.Add(autor);
             // Guarda el autor en la base de datos en memoria.
@@ -159,7 +159,8 @@ public class AutoresControllerTests
             // Mantiene el identificador original.
             ID = autorId,
             // Define el nuevo nombre.
-            Nombre = "Nombre actualizado",
+            Nombre = "Nombre actualizado", 
+            Apellido = "actualizado",
             // Mantiene la nacionalidad.
             Nacionalidad = "Española"
         };
@@ -220,7 +221,7 @@ public class AutoresControllerTests
         // Crea una base de datos en memoria.
         await using var context = CreateContext();
         // Crea el autor que se eliminará.
-        var autor = new Autor { Nombre = "Autor para eliminar", Nacionalidad = "Mexicana" };
+        var autor = new Autor { Nombre = "Autor", Apellido = "para eliminar", Nacionalidad = "Mexicana" };
         // Añade el autor al contexto.
         context.Autores.Add(autor);
         // Persiste el autor y genera su identificador.

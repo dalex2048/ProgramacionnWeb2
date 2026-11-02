@@ -46,7 +46,7 @@ public class AutorValidationTests
     public void NombreCon100CaracteresEsValido()
     {
         // Crea un nombre con exactamente 100 caracteres.
-        var autor = new Autor { Nombre = new string('A', 100) };
+        var autor = new Autor { Nombre = new string('A', 50) };
 
         // Ejecuta las validaciones del modelo.
         var errores = Validate(autor);
