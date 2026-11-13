@@ -10,6 +10,7 @@
 @if (User.IsInRole("Administrador") || User.IsInRole("Bibliotecario"))
 {
     <a asp-action="Create" class="btn btn-primary">Nuevo Libro</a>
+    <a asp-controller="Reportes" asp-action="Index" class="btn btn-outline-dark">Reportes</a>
 }
 
 <table class="table table-striped">

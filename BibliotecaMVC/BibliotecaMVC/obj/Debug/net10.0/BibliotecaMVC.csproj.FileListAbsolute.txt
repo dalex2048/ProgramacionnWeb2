@@ -336,3 +336,11 @@ C:\Users\David\source\repos\Prograweb2\BibliotecaMVC\BibliotecaMVC\bin\Debug\net
 C:\Users\David\source\repos\Prograweb2\BibliotecaMVC\BibliotecaMVC\bin\Debug\net10.0\runtimes\win-x64\native\qpdf.dll
 C:\Users\David\source\repos\Prograweb2\BibliotecaMVC\BibliotecaMVC\bin\Debug\net10.0\runtimes\win-x86\native\QuestPdfSkia.dll
 C:\Users\David\source\repos\Prograweb2\BibliotecaMVC\BibliotecaMVC\bin\Debug\net10.0\runtimes\win-x86\native\qpdf.dll
+C:\Users\David\source\repos\Prograweb2\BibliotecaMVC\BibliotecaMVC\bin\Debug\net10.0\ClosedXML.dll
+C:\Users\David\source\repos\Prograweb2\BibliotecaMVC\BibliotecaMVC\bin\Debug\net10.0\ClosedXML.Parser.dll
+C:\Users\David\source\repos\Prograweb2\BibliotecaMVC\BibliotecaMVC\bin\Debug\net10.0\DocumentFormat.OpenXml.dll
+C:\Users\David\source\repos\Prograweb2\BibliotecaMVC\BibliotecaMVC\bin\Debug\net10.0\DocumentFormat.OpenXml.Framework.dll
+C:\Users\David\source\repos\Prograweb2\BibliotecaMVC\BibliotecaMVC\bin\Debug\net10.0\ExcelNumberFormat.dll
+C:\Users\David\source\repos\Prograweb2\BibliotecaMVC\BibliotecaMVC\bin\Debug\net10.0\RBush.dll
+C:\Users\David\source\repos\Prograweb2\BibliotecaMVC\BibliotecaMVC\bin\Debug\net10.0\SixLabors.Fonts.dll
+C:\Users\David\source\repos\Prograweb2\BibliotecaMVC\BibliotecaMVC\bin\Debug\net10.0\System.IO.Packaging.dll
